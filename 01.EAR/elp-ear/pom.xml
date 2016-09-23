@@ -24,8 +24,12 @@
 			<artifactId>elp-common</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.wicket</groupId>
+			<artifactId>wicket-core</artifactId>
+			<version>7.4.0</version>
+		</dependency>
 	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -34,10 +38,13 @@
 				<version>2.10.1</version>
 				<configuration>
 					<version>7</version>
+					<defaultLibBundleDir>lib/</defaultLibBundleDir>
+          			<skinnyWars>true</skinnyWars>
 					<modules>
 						<webModule>
 							<groupId>com.emi.elp.web</groupId>
 							<artifactId>elp-web</artifactId>
+							<contextRoot>/ELPlatform</contextRoot>
 						</webModule>
 						<ejbModule>
 							<groupId>com.emi.elp.ejb</groupId>
@@ -46,11 +53,11 @@
 						<!--extra lucene libs into lucenelib directory -->
 						<!--jarModule> <groupId>org.apache.lucene</groupId> <artifactId>lucene-highlighter</artifactId> 
 							<bundleDir>lucenlib</bundleDir> </jarModule -->
-						<jarModule>
+						<!--jarModule>
 							<groupId>com.emi.elp.common</groupId>
 							<artifactId>elp-common</artifactId>
 							<bundleDir>lib</bundleDir>
-						</jarModule>
+						</jarModule -->
 					</modules>
 				</configuration>
 			</plugin>

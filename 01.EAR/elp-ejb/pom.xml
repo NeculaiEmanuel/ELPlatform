@@ -13,8 +13,22 @@
 			<version>3.2</version>
 			<scope>provided</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.emi.elp.common</groupId>
+			<artifactId>elp-common</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.emi.elp.jpa</groupId>
+			<artifactId>elp-jpa</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.14</version>
+		</dependency>
 	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -22,8 +36,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.5</version>
 				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
+					<source>1.8</source>
+					<target>1.8</target>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -34,9 +48,9 @@
 					<ejbVersion>3.2</ejbVersion>
 					<generateClient>true</generateClient>
 					<clientIncludes>
-						<clientInclude>com/emi/elp/ejb/testInterfaces/**</clientInclude>
+						<clientInclude>com/emi/elp/ejb/signupmodule/client/**</clientInclude>
 					</clientIncludes>
-				</configuration>
+				</configuration>		
 			</plugin>
 		</plugins>
 	</build>
