@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+	<title>Your Website</title>
+</head>
+
+<body>
+
+	<header>
+		<nav>
+			<ul>
+				<li>MENU</li>
+			</ul>
+		</nav>
+	</header>
+	
+    <section id="aboutSection">
+            
+    </section>
+    
+	<section id="loginSection">
+	
+		<article>
+			<header>
+				<h2>New to ELP ? </h2>
+				<p>Login in Now</p>
+			</header>
+		</article>
+		
+		<article>
+            <form id="loginForm">
+                <fieldset>
+                <legend>LOGIN</legend>
+                Username : <input type="text" name="username" value="Username"><br>
+                Password : <input type="password" name="password" value="Password"><br>
+                <input type="button" value="Login" onclick="loginClicked()">
+                <input type="button" value="Sign Up" onclick="singUpClicked()">
+                </fieldset>
+            </form>
+        </article>
+	</section>
+
+	<footer>
+		<p>Copyright 2016 ELPlatform</p>
+	</footer>
+
+    <script type="text/javascript">
+        function loginClicked(){
+            $("#loginForm").attr("action","login").attr("method","POST");
+            $("#loginForm").submit();
+        }
+    </script>
+    
+</body>
+
+</html>
