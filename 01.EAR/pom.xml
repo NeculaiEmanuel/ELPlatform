@@ -12,7 +12,6 @@
         <module>elp-ejb</module>
         <module>elp-web</module>
         <module>elp-ear</module>
-		<module>elp-build</module>
   </modules>
 	
 </project>
